@@ -7,7 +7,7 @@ public class Controller {
     public MyButton getAdd(){
         return add;
     }
-    public MyButton getSubstract(){
+    public MyButton getDicr(){
         return sub;
     }
 }

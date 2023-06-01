@@ -1,9 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-
-//PropertyChangeListener
-//PropertyChangeSupport
-
 public class Main extends JFrame{
     public Main(){
         this.setTitle("MVC");
@@ -11,7 +7,7 @@ public class Main extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container pane = this.getContentPane();
-        pane.setLayout(new GridLayout(3, 1));
+        pane.setLayout(new GridLayout(1, 2));
 
         Counter counter = new Counter(); //model
         MyPanel panel = new MyPanel(counter); //view
@@ -19,12 +15,12 @@ public class Main extends JFrame{
 
         pane.add(panel);
         pane.add(c.getAdd());
-        pane.add(c.getSubstract());
+        pane.add(c.getDicr());
 
         this.setVisible(true);
 		
 		counter.addObserver(c.getAdd());
-        counter.addObserver(c.getSubstract());
+        counter.addObserver(c.getDicr());
     }
 
     public static void main(String[] args) {
